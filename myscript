@@ -1,5 +1,8 @@
 #!/bin/bash
-cat myscript | while read line
-do
-echo "$line" | rev
-done
+read input
+if [[ $input =~ ^[0-9]+$ ]]
+then
+echo "Integer"
+else
+echo "String"
+fi
