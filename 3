@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "1. ls"
+echo "2. pwd"
+echo "3. ls -l"
+echo "4. ps -fe"
+read
+case $REPLY in
+1) ls ;;
+2) pwd ;;
+3) ls -l ;;
+4) ps -fe ;;
+esac
