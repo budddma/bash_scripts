@@ -1,0 +1,11 @@
+#!/bin/bash
+read input
+if [[ $input =~ ^0+$ ]]
+then
+echo "String"
+elif [[ $input =~ ^-?[0-9]+$ ]]
+then
+echo "Integer"
+else
+echo "String"
+fi
