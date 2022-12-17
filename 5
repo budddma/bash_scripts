@@ -1,0 +1,13 @@
+#!/bin/bash
+words_count=0
+symbols_count=0
+spaces_count=0
+while read "line"
+do
+words_count=$((`echo $line | wc -w` + $words_count))
+symbols_count=$((`echo $line | wc -m` + $symbols_count))
+spaces_count=$((`echo $line | perl -nE'say tr/ \t//;'` + $spaces_count))
+done
+echo "Count of words: $words_count"
+echo "Count of symbols: $symbols_count"
+echo "Count of spaces: $spaces_count"
